@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
+<h1 [class.warning]="dadata">
+  {{title}}{{title2()}}
 </h1>
+<button
+  (click)="dadata2($event)"
+  [attr.aria-label]="'xxxx'">xxxx</button>
+
+  <input [(ngModel)]="title"  >
+  <!--<input [value]="newName.name" (input)="newName.name = $event.target.value" >-->
+
