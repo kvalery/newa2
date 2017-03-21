@@ -1,10 +1,18 @@
 <h1 [class.warning]="dadata">
-  {{title}}{{title2()}}
+  {{title}}
+  {{title2()}}
 </h1>
+<h2>
+  {{newName.name}}
+</h2>
 <button
   (click)="dadata2($event)"
-  [attr.aria-label]="'xxxx'">xxxx</button>
+  [attr.aria-label]="'xxxx'" >
+  xxxx</button >
 
-  <input [(ngModel)]="title"  >
+  <input [(ngModel)]="newName.name" />
   <!--<input [value]="newName.name" (input)="newName.name = $event.target.value" >-->
-
+  <br/>
+  <app-input [value]="title"
+    (myCoursorEvent)="$event" >
+  </app-input>
