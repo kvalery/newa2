@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -8,14 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class InputComponent {
 
  @Input()
- public value:string;
+  public value;
 
- @Output()
- public myCoursorEvent:EventEmitter<string> = new EventEmitter();
 
- public emit(ev:MouseEvent){
-  let el = ev.target as HTMLElement;
-  this.myCoursorEvent.emit(ev.value);
- }
 
 }

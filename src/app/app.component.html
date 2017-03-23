@@ -1,18 +1,22 @@
-<h1 [class.warning]="dadata">
-  {{title}}
-  {{title2()}}
-</h1>
-<h2>
-  {{newName.name}}
-</h2>
-<button
-  (click)="dadata2($event)"
-  [attr.aria-label]="'xxxx'" >
-  xxxx</button >
-
+<div style=" padding: 30px; width: 100%; ">
+  <h1 [class.warning]="dadata" >
+    {{title}}
+    {{title2()}}
+  </h1>
+  <h2>
+    {{newName.name}}
+  </h2>
+  <button
+    (click)="dadata2($event)"
+    [attr.aria-label]="'xxxx'" >
+    xxxx</button >
   <input [(ngModel)]="newName.name" />
   <!--<input [value]="newName.name" (input)="newName.name = $event.target.value" >-->
   <br/>
   <app-input [value]="title"
-    (myCoursorEvent)="$event" >
-  </app-input>
+      (myCoursorEvent)="title = $event" >
+    </app-input>
+
+    <app-data-input [data]="data" ></app-data-input>
+    {{newData}}
+</div>

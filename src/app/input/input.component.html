@@ -1,7 +1,8 @@
-<div>
+<div style="background: gainsboro; padding: 30px; width: 100%; ">
   <br>
-  new -
+  отправить -
   <input
     [value]="value"
-    (input)="emit($event)">
+    (input)="myCoursorEvent.emit($event.target.value)">
+
 </div>

@@ -9,6 +9,9 @@
 export class AppComponent {
 
   private title:string = 'app works';
+  private data:string = 'datdatdata';
+  private newData:string ;
+
 
   private newName = {
     name: 'имя',
@@ -18,7 +21,6 @@ export class AppComponent {
   private dadata:boolean = true;
 
   private dadata2(ev:MouseEvent ){
-    console.log(ev);
     this.dadata = !this.dadata;
   };
 
