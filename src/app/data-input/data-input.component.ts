@@ -21,6 +21,8 @@ export class LogDirective {
   public onInput(ev:KeyboardEvent){
     let el = event.target as HTMLInputElement;
 
+    // this.flag = !this.flag;
+
     if(el.className == "action"){
       el.className = ""
     }else {
@@ -39,9 +41,16 @@ export class LogDirective {
 export class DataInputComponent{
 
   private newData = [];
+  public flag = true;
 
   @Input()
    public data;
+
+  public trackFn(){
+
+    console.log('fff ');
+  }
+
 
   @Output()
    public myCustomEvent = new EventEmitter();

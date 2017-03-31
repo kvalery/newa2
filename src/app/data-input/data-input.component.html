@@ -2,7 +2,11 @@
   <br>
 
   <br>
-  <input [value]="data.title" log-directive (input)="emit($event)" class="action" >{{'  --- заголовок'}}
+  <input [value]="data.title"
+         log-directive
+         (input)="emit($event)"
+         class="action"
+         [ngClass]="{classClass: flag }">{{'  --- заголовок'}}
   <br><br>
   <input [value]="newData[0]" >
   <br><br>
@@ -23,6 +27,9 @@
     (click)="getData()" >
     заполнить
   </button>
+  <div *ngFor="let dat of data.dataFormExample | simplePipe;  trackBy: trackFn">
+    <p>{{dat}}</p>
+  </div>
 
 
 </div>

@@ -17,6 +17,8 @@ export class AppComponent {
     dataFormExample:['qwe1','qwe','ert','tyu']
   };
 
+
+
   public getexampleData(){
     this.changeFlag();
     return this.data.dataFormExample;
