@@ -1,3 +1,7 @@
+.dataView{
+  border: 1px solid black;
+}
 .warning{
   color: red;
+  border-color: red;
 }

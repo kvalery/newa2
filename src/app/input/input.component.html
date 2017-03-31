@@ -1,8 +1,7 @@
 <div style="background: gainsboro; padding: 30px; width: 100%; ">
-  <br>
-  отправить -
-  <input
-    [value]="value"
-    (input)="myCoursorEvent.emit($event.target.value)">
+ <textarea
+   style="width: 500px; height: 100px; resize: none;">
+    {{value.title +"  "+ value.name +"  "+ value.dataForm[0] +"  "+ value.dataForm[1] +"  "+ value.dataForm[2] +"  "+ value.dataForm[3]}}
+  </textarea>
 
 </div>

@@ -2,31 +2,48 @@
 
 @Component({
   selector: 'app-root',
-  // template: '<h1>hhhhhhh2131</h1>',
-   templateUrl: './app.component.html',
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
-  private title:string = 'app works';
-  private data:string = 'datdatdata';
-  private newData:string ;
+  public dadata:boolean = true;
 
-
-  private newName = {
-    name: 'имя',
-    name2: 'bvz2'
+  public data = {
+    flag: false,
+    title:'',
+    name:'',
+    dataForm:[],
+    dataFormExample:['qwe1','qwe','ert','tyu']
   };
 
-  private dadata:boolean = true;
-
-  private dadata2(ev:MouseEvent ){
-    this.dadata = !this.dadata;
+  public getexampleData(){
+    this.changeFlag();
+    return this.data.dataFormExample;
   };
 
-  private title2():string {
-    return "!!!!!"
+  public resert(){
+
+    console.log('resert');
+
+    this.data = {
+      flag: false,
+      title:'',
+      name:'',
+      dataForm:[],
+      dataFormExample:['одни','два','три','четырее']
+    }
+  }
+
+  public changeFlag(){
+    this.data.flag = !this.data.flag;
   };
+
+  public sentData(data){
+    console.log(data);
+    this.changeFlag();
+  }
+
 }
 
 

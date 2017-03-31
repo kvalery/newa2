@@ -5,10 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { InputComponent } from './input/input.component';
-import { DataInputComponent } from './data-input/data-input.component';
+import { DataInputComponent, LogDirective  } from './data-input/data-input.component';
 
 @NgModule({
   declarations: [
+    LogDirective,
     AppComponent,
     InputComponent,
     DataInputComponent

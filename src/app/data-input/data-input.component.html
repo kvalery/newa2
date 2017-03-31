@@ -1,19 +1,28 @@
 <div style=" padding: 30px; width: 100%; ">
   <br>
-  1 -
-  <input [value]="newData" #testRef>
-  <button
-    (click)="sentData()">
-    отправить
-  </button>
 
   <br>
-  <br>
+  <input [value]="data.title" log-directive (input)="emit($event)" class="action" >{{'  --- заголовок'}}
+  <br><br>
+  <input [value]="newData[0]" >
+  <br><br>
+  <input [value]="newData[1]" >
+  <br><br>
+  <input [value]="newData[2]" >
+  <br><br>
+  <input [value]="newData[3]">
+  <br><br>
 
-  2- "{{newData2}}"
   <button
     (click)="sentData()" >
     отправить
   </button>
-</div>
 
+  <button
+    style="margin-left: 30px;"
+    (click)="getData()" >
+    заполнить
+  </button>
+
+
+</div>
