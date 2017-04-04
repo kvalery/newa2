@@ -32,7 +32,6 @@ export class LogDirective {
   }
 }
 
-
 @Component({
   selector: 'app-data-input',
   templateUrl: './data-input.component.html',
@@ -47,10 +46,8 @@ export class DataInputComponent{
    public data;
 
   public trackFn(){
-
-    console.log('fff ');
+    // console.log('fff');
   }
-
 
   @Output()
    public myCustomEvent = new EventEmitter();

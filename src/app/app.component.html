@@ -1,5 +1,34 @@
-<div style=" padding: 30px; width: 100%; ">
+<div style="background: lightcoral">
+  router ---
+  <router-outlet>
+  </router-outlet>
+</div>
 
+<a href='' [routerLink]="['dsfdfg']" >--error--</a>
+
+<button [routerLink]="['Page1']" >
+  --1--
+</button>
+
+<button [routerLink]="['Page1/one']" >
+  --1,1--
+</button>
+
+<button [routerLink]="['Page1/two']" >
+  --1.2--
+</button>
+
+<button [routerLink]="['2/7']" >
+  --2-7-
+</button>
+
+
+<button [routerLink]="['2/17']" >
+  --2-17-
+</button>
+
+
+<div style=" padding: 30px; width: 100%; ">
   <div class="dataView"
      [class.warning]="data.flag"
      style="width: 1000px; height: 300px; overflow: scroll; overflow-x: hidden;  padding: 10px;">
