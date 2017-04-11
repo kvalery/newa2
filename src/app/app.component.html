@@ -1,3 +1,12 @@
+<!--data - {/{ newTime }}-->
+data - {{ newTime | async | date: 'ms' }}
+
+<button (click)="example(0)">example-1</button>
+<button (click)="example(1)">example-2</button>
+<button (click)="example(2)">example-3</button>
+<button (click)="example(3)">example-4</button>
+<app-modal></app-modal>
+
 <div style="background: lightcoral">
   router ---
   <router-outlet>
@@ -21,7 +30,6 @@
 <button [routerLink]="['2/7']" >
   --2-7-
 </button>
-
 
 <button [routerLink]="['2/17']" >
   --2-17-

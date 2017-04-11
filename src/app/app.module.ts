@@ -14,8 +14,12 @@ import { PageErrorComponent } from './page-error/page-error.component';
 import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
 
+import { ModalComponent } from './serv/modal.component';
+import { ModalService } from './modal/modal.service';
+
 const routes = [
-  {
+{
+
     path:'Page1' ,
     component: Page1Component,
     children: [
@@ -52,6 +56,7 @@ const routes = [
     SimplePipePipe,
     Page1Component,
     Page2Component,
+    ModalComponent,
     PageErrorComponent,
     OneComponent,
     TwoComponent
@@ -62,7 +67,7 @@ const routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
