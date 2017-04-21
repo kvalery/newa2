@@ -17,9 +17,10 @@ import { TwoComponent } from './two/two.component';
 import { ModalComponent } from './serv/modal.component';
 import { ModalService } from './modal/modal.service';
 
+import { TempComponentComponent } from './temp-component/temp-component.component';
+
 const routes = [
 {
-
     path:'Page1' ,
     component: Page1Component,
     children: [
@@ -59,7 +60,8 @@ const routes = [
     ModalComponent,
     PageErrorComponent,
     OneComponent,
-    TwoComponent
+    TwoComponent,
+    TempComponentComponent
   ],
   imports: [
     BrowserModule,

@@ -4,8 +4,6 @@
  import {observeOn} from "rxjs/operator/observeOn";
  import {ModalService} from "./modal/modal.service";
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -57,7 +55,15 @@ export class AppComponent {
   }
 
   public example(flag){
-    let data =[
+
+    if( typeof(flag) === 'string'){
+
+      console.log(this)
+      this._modalService.sentModule('sentModule');
+
+    }else{
+      this.promisTest();
+      let data =[
       {
         flag: true,
         num: 12,
@@ -87,10 +93,35 @@ export class AppComponent {
         age: 100023
       }
     ];
-    this._modalService.getData(data[flag]);
+      this._modalService.getData(data[flag]);
+    }
   }
-  constructor( _modalService: ModalService  ){
+
+  constructor( _modalService: ModalService ){
     this._modalService = _modalService;
+  }
+
+  public promisTest (){
+
+    this.testTestPromis().then(
+      (param) => {
+        console.log('промис - да')
+      })
+
+      .catch(
+        (param) =>{
+          console.log('промис - нет')
+        });
+  }
+
+  public testTestPromis(){
+    return new Promise((resolve, reject)=>{
+      if(confirm('даИльНет?')){
+        resolve('ДАААААА')
+      }else{
+        reject('НЕТТТТТТ')
+      }
+    });
   }
 
 }
