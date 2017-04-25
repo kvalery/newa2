@@ -36,42 +36,44 @@ data - {{ newTime | async | date: 'ms' }}
   --2-17-
 </button>
 
-
-<div style=" padding: 30px; width: 100%; ">
-  <div class="dataView"
-     [class.warning]="data.flag"
-     style="width: 1000px; height: 300px; overflow: scroll; overflow-x: hidden;  padding: 10px;">
+<div style="background: gainsboro; height: 300px; overflow: scroll; margin-top: 500px">
+  <div style=" padding: 30px; width: 100%; ">
+    <div class="dataView"
+         [class.warning]="data.flag"
+         style="width: 1000px; height: 300px; overflow: scroll; overflow-x: hidden;  padding: 10px;">
 
     <pre>
         {{data | json }}
     </pre>
 
+    </div>
+    <br/><br/>
+
+
+    <button
+      (click)="resert($event)">
+      xxxx</button >
+
+    <button
+      (click)="changeFlag()">
+      {{(data.flag)? 'black' : 'red'}}
+    </button >
+    <br/><br/>
+
+    <input
+      [value]=" "
+      (input)="data.title = $event.target.value"
+    ><br/><br/>
+
+    <input
+      [(ngModel)]="data.title"
+    ><br/><br/>
+
+
+    <app-input [value]="data"> </app-input>
+
+    <app-data-input [data]="data" (myCustomEvent)="data.dataForm[0] = $event" ></app-data-input>
+
   </div>
-  <br/><br/>
-
-
-  <button
-    (click)="resert($event)">
-    xxxx</button >
-
-  <button
-    (click)="changeFlag()">
-    {{(data.flag)? 'black' : 'red'}}
-  </button >
-  <br/><br/>
-
-  <input
-    [value]=" "
-    (input)="data.title = $event.target.value"
-  ><br/><br/>
-
-  <input
-    [(ngModel)]="data.title"
-  ><br/><br/>
-
-
-  <app-input [value]="data"> </app-input>
-
-  <app-data-input [data]="data" (myCustomEvent)="data.dataForm[0] = $event" ></app-data-input>
-
 </div>
+

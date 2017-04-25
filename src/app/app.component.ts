@@ -111,7 +111,7 @@ export class AppComponent {
       .catch(
         (param) =>{
           console.log('промис - нет')
-        });
+       });
   }
 
   public testTestPromis(){
