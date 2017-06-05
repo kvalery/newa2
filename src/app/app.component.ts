@@ -3,6 +3,11 @@
  import {Observer} from "rxjs/Observer";
  import {observeOn} from "rxjs/operator/observeOn";
  import {ModalService} from "./modal/modal.service";
+ import { DialogService } from "ng2-bootstrap-modal";
+ import { AlertComponent } from './alert/alert.component';
+
+ var fffffff = 'fffffff';
+ declare var JsDiff: any;
 
 @Component({
   selector: 'app-root',
@@ -16,6 +21,17 @@ export class AppComponent {
   public newTime = new Observable<string>(( observer : Observer<string>) =>{
     setInterval( () => observer.next( new Date().toString() ),1000 )
   });
+
+  public componentName = 'app-testtest1';
+
+  public componentNameChang (){
+
+    if (this.componentName == 'app-testtest1' ){
+      this.componentName = 'app-testtest2';
+    } else {
+      this.componentName = 'app-testtest1';
+    }
+  };
 
   public dadata:boolean = true;
 
@@ -97,8 +113,30 @@ export class AppComponent {
     }
   }
 
-  constructor( _modalService: ModalService ){
-    this._modalService = _modalService;
+
+  constructor( private dialogService:DialogService ){
+
+    console.log('-----------')
+
+    var one = 'beep boop2222222';
+    var other = 'beep boob blah';
+
+    console.log( JsDiff.diffChars( one, other) )
+
+
+
+    // let options = {
+    //   'ignoreWhitespace': true,
+    //    'newlineIsToken': false
+    // }
+    //
+    // console.log('JsDiff');
+    // console.log(JsDiff);
+    //
+    // console.log( 'JsDiff---' );
+    // console.log( JsDiff.diffChars('qqqq', 'qqqq2') );
+    // console.log( JsDiff.diffChars('qqqq2', 'qqqq') );
+
   }
 
   public promisTest (){
@@ -122,6 +160,12 @@ export class AppComponent {
         reject('НЕТТТТТТ')
       }
     });
+  }
+
+  public showAlert (){
+
+    this.dialogService.addDialog(AlertComponent, {title:'Alert title!', message:'Alert message!!!'});
+
   }
 
 }

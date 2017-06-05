@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { CommonModule } from "@angular/common";
 
 import { AppComponent } from './app.component';
 import { InputComponent } from './input/input.component';
@@ -18,6 +19,12 @@ import { ModalComponent } from './serv/modal.component';
 import { ModalService } from './modal/modal.service';
 
 import { TempComponentComponent } from './temp-component/temp-component.component';
+import { Testtest1Component } from './testtest1/testtest1.component';
+import { Testtest2Component } from './testtest2/testtest2.component';
+
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+
+import { AlertComponent } from './alert/alert.component';
 
 const routes = [
 {
@@ -61,15 +68,21 @@ const routes = [
     PageErrorComponent,
     OneComponent,
     TwoComponent,
-    TempComponentComponent
+    TempComponentComponent,
+    Testtest1Component,
+    Testtest2Component,
+    AlertComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
     HttpModule,
+    BootstrapModalModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ModalService],
+  entryComponents: [AlertComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -35,7 +35,13 @@ data - {{ newTime | async | date: 'ms' }}
 <button [routerLink]="['2/17']" >
   --2-17-
 </button>
+<div style="border: 10px solid gray; background: gainsboro; ">
+  <h1>Dynamic View and Components</h1>
+  <button (click)=showAlert()> Dynamic Component</button>
 
+
+
+</div>
 <div style="background: gainsboro; height: 300px; overflow: scroll; margin-top: 500px">
   <div style=" padding: 30px; width: 100%; ">
     <div class="dataView"
