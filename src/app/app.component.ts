@@ -116,26 +116,36 @@ export class AppComponent {
 
   constructor( private dialogService:DialogService ){
 
-    console.log('-----------')
+    var result = [];
 
-    var one = 'beep boop2222222';
-    var other = 'beep boob blah';
+    require('colors')
+    // var jsdiff = require('diff');
 
-    console.log( JsDiff.diffChars( one, other) )
+    var one =   'beep b';
+    var other = 'beep bo cccc 2fff';
 
+    var diff = JsDiff.diffWords(one, other);
 
+    console.log(diff);
 
-    // let options = {
-    //   'ignoreWhitespace': true,
-    //    'newlineIsToken': false
-    // }
+    // diff.forEach(function(part){
     //
-    // console.log('JsDiff');
-    // console.log(JsDiff);
+    //   console.log(part);
     //
-    // console.log( 'JsDiff---' );
-    // console.log( JsDiff.diffChars('qqqq', 'qqqq2') );
-    // console.log( JsDiff.diffChars('qqqq2', 'qqqq') );
+    //   // green for additions, red for deletions
+    //   // grey for common parts
+    //
+    //   var color = part.added ? 'green' :
+    //
+    //   part.removed ? 'red' : 'grey';
+    //
+    //   console.log(color);
+    //
+    //   result.push(part.value[color]);
+    //
+    // });
+
+    console.log(result)
 
   }
 
