@@ -1,4 +1,18 @@
 <!--data - {/{ newTime }}-->
+
+<div style="border: 1px solid black; overflow: scroll;">
+  -*******-
+  <pre diff [left]="left" [right]="right"></pre>
+  -*******-
+  <pre lineDiff [left]="left" [right]="right"></pre>
+  -*******-
+  <pre semanticDiff [left]="left" [right]="right"></pre>
+  -*******-
+  <pre processingDiff [left]="left" [right]="right"></pre>
+  -*******-
+
+</div>
+
 data - {{ newTime | async | date: 'ms' }}
 <button (click)="example('modal')">module send</button>
 

@@ -16,6 +16,9 @@
 })
 export class AppComponent {
 
+  public left = 'Перевести эту страницу A javascript text diff implementation. ... data. patch may be a string diff or the output from the parsePatch or structuredPatch methods. ... Basic example in Node.';
+  public right = 'Перевести эту стр аницу A javascript text diff implementat sssion. ... data. patch may be a stsring diff or the output from th   Patch methods. ... Basic example in Node.';
+
   public _modalService: ModalService;
 
   public newTime = new Observable<string>(( observer : Observer<string>) =>{

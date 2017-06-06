@@ -26,6 +26,12 @@ import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 
 import { AlertComponent } from './alert/alert.component';
 
+
+// import our necessary module and components here
+import { DiffMatchPatchModule, DiffDirective } from '../../node_modules/ng-diff-match-patch/index';
+
+
+
 const routes = [
 {
     path:'Page1' ,
@@ -79,6 +85,7 @@ const routes = [
     FormsModule,
     HttpModule,
     BootstrapModalModule,
+    DiffMatchPatchModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ModalService],
